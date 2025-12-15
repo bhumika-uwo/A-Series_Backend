@@ -1,5 +1,4 @@
-import express, { urlencoded } from "express";
-// import dotenv from "dotenv";
+import express, { urlencoded } from "express"; import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import chatRoutes from "./routes/chatRoutes.js";
@@ -9,7 +8,7 @@ import authRoutes from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
 import emailVatifiation from "./routes/emailVerification.js"
 import agent from "./routes/agentRoutes.js"
-// dotenv.config();
+ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 // Connect to Database
@@ -40,6 +39,7 @@ app.use('/api/agents', agentRoutes);
 
 //email varification route 
 app.use("/api/email_varification", emailVatifiation)
+
 
 // Global Error Handler
 app.use((err, req, res, next) => {

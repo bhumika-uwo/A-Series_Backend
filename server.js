@@ -1,9 +1,6 @@
 import express, { urlencoded } from "express";
-<<<<<<< HEAD
  import dotenv from "dotenv";
-=======
 import 'dotenv/config';
->>>>>>> cb3175300d80f479fc21661d0c5f25e6e746c540
 import cors from "cors";
 import connectDB from "./config/db.js";
 import chatRoutes from "./routes/chatRoutes.js";
@@ -13,10 +10,8 @@ import authRoutes from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
 import emailVatifiation from "./routes/emailVerification.js"
 import agent from "./routes/agentRoutes.js"
-<<<<<<< HEAD
+
  dotenv.config();
-=======
->>>>>>> cb3175300d80f479fc21661d0c5f25e6e746c540
 const app = express();
 const PORT = process.env.PORT 
 // Connect to Database

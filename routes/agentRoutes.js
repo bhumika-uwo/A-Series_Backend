@@ -88,4 +88,4 @@ route.post("/get_my_agents", async (req, res) => {
 
 })
 
-export default route
+export default rout

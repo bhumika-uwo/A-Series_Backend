@@ -1,6 +1,5 @@
 import express from "express"
 import userModel from "../models/User.js"
-import { sendVerificationEmail } from "../utils/Email.js"
 const router = express.Router()
 
 

@@ -5,7 +5,7 @@ import { resend, transporter } from "./Email.config.js";
 export const sendVerificationEmail=async(email,verificationCode)=>{
     try {
      const response=   await resend.emails.send({
-            from: 'verification@ai-mall.in',
+            from: process.env.EMAIL,
             to: [email], 
             subject: "Verify your Email", 
             html: Verification_Email_Template.replace("{verificationCode}",verificationCode)

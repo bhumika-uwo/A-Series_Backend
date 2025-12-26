@@ -2,8 +2,8 @@ import express from 'express';
 import AibaseConversation from '../models/AibaseConversation.js';
 import AibaseKnowledge from '../models/AibaseKnowledge.js';
 import * as aibaseService from '../services/aibaseService.js';
-import * as pdfParseLib from 'pdf-parse';
-const pdfParse = pdfParseLib.default || pdfParseLib;
+import pdfParse from 'pdf-parse/lib/pdf-parse.js';
+
 
 const router = express.Router();
 

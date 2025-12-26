@@ -1,24 +1,38 @@
 import { generativeModel } from '../config/vertex.js';
-import { ChatPromptTemplate } from "@langchain/core/prompts";
+import AibaseKnowledge from '../models/AibaseKnowledge.js';
 
 // Initialize Gemini Chat Model using existing config
 const model = generativeModel;
 
-// Simple in-memory document store (for demo - replace with Atlas Vector Search when configured)
+// Simple in-memory document store
 let documentStore = [];
 
 // Helper: Split text into chunks
-const splitText = (text, chunkSize = 1000, overlap = 200) => {
+const splitText = (text, chunkSize = 1500, overlap = 300) => {
+    if (!text) return [];
+    if (text.length <= chunkSize) return [text];
+
     const chunks = [];
     let start = 0;
     while (start < text.length) {
         const end = Math.min(start + chunkSize, text.length);
         chunks.push(text.slice(start, end));
-        start = end - overlap;
-        if (start + overlap >= text.length) break;
+
+        if (end >= text.length) break;
+
+        // Advance start by chunkSize - overlap
+        const nextStart = end - overlap;
+
+        // Safety: If for some reason we aren't advancing, break
+        if (nextStart <= start) {
+            start = end; // Force advance
+        } else {
+            start = nextStart;
+        }
     }
     return chunks;
 };
+
 
 // Store document
 export const storeDocument = async (text) => {
@@ -26,7 +40,7 @@ export const storeDocument = async (text) => {
         const chunks = splitText(text);
         console.log(`[AIBASE] Split into ${chunks.length} chunks.`);
 
-        // Store chunks in memory (or MongoDB)
+        // Store chunks in memory
         chunks.forEach(chunk => {
             documentStore.push({
                 content: chunk,
@@ -42,9 +56,12 @@ export const storeDocument = async (text) => {
     }
 };
 
-// Simple keyword-based search (fallback for when vector search isn't configured)
-const searchDocuments = (query, topK = 4) => {
+// Simple keyword-based search
+const searchDocuments = (query, topK = 5) => {
+    if (!documentStore || documentStore.length === 0) return [];
+
     const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+    if (queryWords.length === 0) return documentStore.slice(-topK); // Return recent if query is too short
 
     const scored = documentStore.map(doc => {
         const content = doc.content.toLowerCase();
@@ -69,39 +86,44 @@ export const chat = async (message) => {
         }
 
         // Search for relevant documents
-        const retrievedDocs = searchDocuments(message, 4);
+        let retrievedDocs = searchDocuments(message, 5);
+
+        // Fallback: If no matches but we have documents, take the most recent ones
+        if (retrievedDocs.length === 0 && documentStore.length > 0) {
+            console.log(`[AIBASE] No keyword matches. Using most recent docs as context.`);
+            retrievedDocs = documentStore.slice(-3);
+        }
 
         // Format context
         let contextText = "";
         if (retrievedDocs && retrievedDocs.length > 0) {
             contextText = retrievedDocs
                 .map(doc => doc.content)
-                .join("\n\n");
-            console.log(`[AIBASE] Found ${retrievedDocs.length} relevant docs.`);
+                .join("\n\n---\n\n");
+            console.log(`[AIBASE] Using ${retrievedDocs.length} chunks as context.`);
         } else {
-            console.log(`[AIBASE] No documents found for query.`);
-            contextText = "No relevant documents found.";
+            console.log(`[AIBASE] No documents available for context.`);
+            contextText = "No uploaded documents found.";
         }
 
         // Create prompt
         const prompt = `
         You are the AI-Base Knowledge Assistant.
-
-        INSTRUCTIONS:
-        1. PRIMARY SOURCE: You MUST search the provided <context> first.
-           - If the answer is in the <context>, answer ONLY using that information.
-           
-        2. SECONDARY SOURCE: If <context> does not contain the answer:
-           - You may use your general knowledge.
-           - Say: "I couldn't find this in your documents, but generally speaking..."
-
-        3. GREETINGS: For casual messages (e.g., "Hi", "Thanks"), be polite and friendly.
+        
+        USER QUESTION: ${message}
 
         <context>
         ${contextText}
         </context>
 
-        Question: ${message}
+        INSTRUCTIONS:
+        1. Search the <context> for information relevant to the user's question.
+        2. If you find the answer in the <context>, provide a helpful and accurate response based ONLY on that information.
+        3. If the <context> is "No uploaded documents found." or doesn't contain the answer, say: 
+           "I couldn't find specific information about this in your documents, but based on what I know..." 
+           Then proceed to answer using your general knowledge if possible.
+        4. If the message is a greeting or casual talk, respond politely without mentioning the documents unless asked.
+        5. Be professional, clear, and structured.
         `;
 
         // Invoke model (Gemini / Vertex AI)
@@ -128,15 +150,36 @@ export const chat = async (message) => {
 // Initialize from DB - Load existing documents
 export const initializeFromDB = async () => {
     try {
-        console.log("[AIBASE] Service initialized.");
-        // In a production setup, you would load documents from MongoDB here
+        console.log("[AIBASE] Initializing from database...");
+        // Limit to most recent 50 documents to prevent memory issues
+        const docs = await AibaseKnowledge.find({}).sort({ createdAt: -1 }).limit(50);
+
+        if (docs && docs.length > 0) {
+            documentStore = []; // Reset
+            for (const doc of docs) {
+                if (!doc.content) continue;
+                const chunks = splitText(doc.content);
+                chunks.forEach(chunk => {
+                    documentStore.push({
+                        content: chunk,
+                        timestamp: doc.createdAt
+                    });
+                });
+            }
+            console.log(`[AIBASE] Loaded ${docs.length} documents into ${documentStore.length} chunks.`);
+        } else {
+            console.log("[AIBASE] No documents found in database.");
+        }
     } catch (error) {
-        console.error(`[AIBASE] Failed to initialize: ${error.message}`);
+        console.error(`[AIBASE] Failed to initialize from DB: ${error.message}`);
     }
 };
+
 
 // Reload (clear documents)
 export const reloadVectorStore = async () => {
     documentStore = [];
-    console.log("[AIBASE] Document store cleared.");
+    await initializeFromDB(); // Reload from DB instead of just clearing
+    console.log("[AIBASE] Document store reloaded from database.");
 };
+

@@ -11,13 +11,20 @@ import cookieParser from "cookie-parser";
 import emailVatifiation from "./routes/emailVerification.js"
 import userRoute from './routes/user.js'
 import aibaseRoutes from './routes/aibaseRoutes.js'
+import pdfRoutes from './routes/pdfRoutes.js';
 import fileUpload from 'express-fileupload';
+import * as aibaseService from './services/aibaseService.js';
+
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT
 // Connect to Database
-connectDB();
+connectDB().then(() => {
+  console.log("Database connected, initializing services...");
+  aibaseService.initializeFromDB();
+});
+
 
 // Middleware
 
@@ -52,6 +59,9 @@ app.use("/api/email_varification", emailVatifiation)
 
 // AIBASE Routes: /api/aibase/chat, /api/aibase/knowledge
 app.use('/api/aibase', aibaseRoutes);
+
+// PDF Analysis Routes: /api/pdf/analyze
+app.use('/api/pdf', pdfRoutes);
 
 
 // Global Error Handler

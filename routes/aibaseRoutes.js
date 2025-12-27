@@ -9,6 +9,12 @@ const router = express.Router();
 
 // ==================== CHAT ROUTES ====================
 
+// GET /api/aibase/ping - Test route
+router.get('/ping', (req, res) => {
+    console.log('[AIBASE] Ping route hit');
+    res.json({ success: true, message: 'AIBASE router is working' });
+});
+
 // POST /api/aibase/chat - Send a message
 router.post('/chat', async (req, res) => {
     try {

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import express from "express"
 import ChatSession from "../models/ChatSession.js"
-import { generativeModel } from "../config/vertex.js";
+import { generativeModel } from "../config/gemini.js";
 import userModel from "../models/User.js";
 import { verifyToken } from "../middleware/authorization.js";
 
@@ -36,25 +36,25 @@ router.post("/", async (req, res) => {
     parts.push({ text: `User: ${content}` });
 
 
-    const request = {
-      contents: [{ role: "user", parts: parts }],
-    };
+    // For Google Generative AI SDK, we pass the parts directly (or a prompt string) as the "contents".
+    // It accepts an array of Content objects, or a simple string/array of parts.
+    // However, since we are sending a single turn of "user" content (that includes history context manually mocked), we just send the parts array wrapped in strict format if needed, or just the parts.
 
+    // Correct usage for single-turn content generation with this SDK
+    // model.generateContentStream([ ...parts ])
 
-    const streamingResult = await generativeModel.generateContentStream(request);
+    // Construct valid Content object
+    const contentPayload = { role: "user", parts: parts };
 
+    const streamingResult = await generativeModel.generateContentStream({ contents: [contentPayload] });
 
+    // Iterate stream if needed, or await full response
     for await (const chunk of streamingResult.stream) {
-      const text =
-        chunk?.candidates?.[0]?.content?.parts?.[0]?.text || null;
+      // Just consuming stream to ensure completion
     }
 
-
     const finalResponse = await streamingResult.response;
-
-
-    const reply =
-      finalResponse?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+    const reply = finalResponse.text();
 
     return res.status(200).json({ reply });
   } catch (err) {

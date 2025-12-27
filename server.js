@@ -12,6 +12,7 @@ import emailVatifiation from "./routes/emailVerification.js"
 import userRoute from './routes/user.js'
 import aibaseRoutes from './routes/aibaseRoutes.js'
 import pdfRoutes from './routes/pdfRoutes.js';
+import aibizRoutes from './routes/aibizRoutes.js';
 import fileUpload from 'express-fileupload';
 import * as aibaseService from './services/aibaseService.js';
 
@@ -34,22 +35,31 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use(fileUpload()); // For AIBASE file uploads
 
+app.get("/ping-top", (req, res) => {
+  res.send("Top ping works");
+})
+
 app.get("/", (req, res) => {
   res.send("All working")
 })
+// Debug middleware
+app.use('/api', (req, res, next) => {
+  console.log(`[API DEBUG] ${req.method} ${req.url}`);
+  next();
+});
+
 // Mount Routes
-// Auth Routes: /api/auth/login, /api/auth/signup
-app.use('/api/auth', authRoutes);
+// AIBASE Routes: /api/aibase/chat, /api/aibase/knowledge
+app.use('/api/aibase', aibaseRoutes);
 
 //Get user Route
-
 app.use('/api/user', userRoute)
 
 // Chat Routes: /api/chat (GET sessions), /api/chat/:id (GET history), /api/chat/:id/message (POST message)
 app.use('/api/chat', chatRoutes);
 
-// Dashboard/General Routes: /api/dashboard/stats, /api/automations, /api/admin/settings
-app.use('/api', dashboardRoutes);
+// Auth Routes: /api/auth/login, /api/auth/signup
+app.use('/api/auth', authRoutes);
 
 // Agent Routes: /api/agents (GET/POST agents)
 app.use('/api/agents', agentRoutes);
@@ -57,11 +67,14 @@ app.use('/api/agents', agentRoutes);
 //email varification route 
 app.use("/api/email_varification", emailVatifiation)
 
-// AIBASE Routes: /api/aibase/chat, /api/aibase/knowledge
-app.use('/api/aibase', aibaseRoutes);
+// Dashboard/General Routes: /api/dashboard/stats, /api/automations, /api/admin/settings
+app.use('/api', dashboardRoutes);
 
 // PDF Analysis Routes: /api/pdf/analyze
 app.use('/api/pdf', pdfRoutes);
+
+// AIBIZ Routes
+app.use('/api/aibiz', aibizRoutes);
 
 
 // Global Error Handler

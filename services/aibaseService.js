@@ -1,4 +1,4 @@
-import { generativeModel } from '../config/vertex.js';
+import { generativeModel } from '../config/gemini.js';
 import AibaseKnowledge from '../models/AibaseKnowledge.js';
 
 // Initialize Gemini Chat Model using existing config

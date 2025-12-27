@@ -1,6 +1,8 @@
 
 
 import fs from "fs";
+import os from "os";
+import path from "path";
 
 if (process.env.GOOGLE_CREDENTIALS_BASE64) {
   const decodedKey = Buffer.from(
@@ -8,9 +10,10 @@ if (process.env.GOOGLE_CREDENTIALS_BASE64) {
     "base64"
   ).toString("utf-8");
 
-  fs.writeFileSync("/tmp/gcp-key.json", decodedKey);
+  const tempKeyPath = path.join(os.tmpdir(), "gcp-key.json");
+  fs.writeFileSync(tempKeyPath, decodedKey);
 
-  process.env.GOOGLE_APPLICATION_CREDENTIALS = "/tmp/gcp-key.json";
+  process.env.GOOGLE_APPLICATION_CREDENTIALS = tempKeyPath;
 }
 
 
@@ -23,10 +26,10 @@ import {
 
 const project = process.env.GCP_PROJECT_ID;
 const location = 'us-central1';
-const textModel = 'gemini-2.5-pro';
-const visionModel = 'gemini-2.5-pro';
+const textModel = 'gemini-1.5-flash-001';
+const visionModel = 'gemini-1.5-flash-001';
 
-const vertexAI = new VertexAI({ project: project, location: location });
+export const vertexAI = new VertexAI({ project: project, location: location });
 
 // Instantiate Gemini models
 export const generativeModel = vertexAI.getGenerativeModel({

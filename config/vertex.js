@@ -24,10 +24,16 @@ import {
   VertexAI
 } from '@google-cloud/vertexai';
 
-const project = process.env.GCP_PROJECT_ID;
+const project = process.env.GCP_PROJECT_ID || process.env.PROJECT_ID || process.env.GOOGLE_CLOUD_PROJECT;
 const location = 'us-central1';
 const textModel = 'gemini-1.5-flash-001';
 const visionModel = 'gemini-1.5-flash-001';
+
+if (!project) {
+    console.error("❌ Vertex AI Error: GCP_PROJECT_ID not found in environment variables.");
+} else {
+    console.log(`✅ Vertex AI initializing with Project ID: ${project}`);
+}
 
 export const vertexAI = new VertexAI({ project: project, location: location });
 

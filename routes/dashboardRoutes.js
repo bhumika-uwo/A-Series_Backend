@@ -74,7 +74,7 @@ router.get('/admin/stats', async (req, res) => {
       inventory: agents.map(a => ({
         id: a._id,
         name: a.agentName,
-        pricing: a.pricing || 'Free',
+        pricing: a.pricing?.type || 'Free',
         status: a.status || 'Inactive',
         reviewStatus: a.reviewStatus || 'Draft'
       }))

@@ -94,7 +94,7 @@ const AgentSchema = new mongoose.Schema(
 
         rating: {
             type: Number,
-            default: null
+            default: 0
         },
 
         usageCount: {

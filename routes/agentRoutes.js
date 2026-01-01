@@ -22,7 +22,8 @@ route.post('/', verifyToken, async (req, res) => {
       category,
       avatar,
       url,
-      pricing,
+      url,
+      pricing: { type: pricing },
       status: 'Inactive',
       reviewStatus: 'Draft',
       owner: req.user.id

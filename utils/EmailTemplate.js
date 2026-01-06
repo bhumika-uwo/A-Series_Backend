@@ -417,6 +417,40 @@ export const Reset_Password_Email_Template = `
                 </html>
                 `;
 
+export const Password_Change_Success_Template = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Changed Successfully - AI Mall</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        .container { max-width: 600px; margin: 30px auto; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); overflow: hidden; border: 1px solid #ddd; }
+        .header { background-color: #28a745; color: white; padding: 30px 20px; text-align: center; }
+        .header h1 { margin: 0; font-size: 26px; font-weight: bold; }
+        .content { padding: 30px 25px; }
+        .footer { background-color: #f4f4f4; padding: 20px; text-align: center; color: #777; font-size: 12px; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✅ Password Changed</h1>
+        </div>
+        <div class="content">
+            <p>Hello {name},</p>
+            <p>Your password for AI Mall has been successfully updated.</p>
+            <p>If you did not make this change, please contact our support team immediately.</p>
+        </div>
+        <div class="footer">
+            <p><strong>AI Mall</strong> - Secure & Intelligent AI Solutions</p>
+        </div>
+    </div>
+</body>
+</html>
+`;
+
 
 // Helper function to replace placeholders in templates
 export const renderEmailTemplate = (template, data) => {

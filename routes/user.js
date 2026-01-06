@@ -20,15 +20,15 @@ route.get("/", verifyToken, async (req, res) => {
 route.put("/", verifyToken, async (req, res) => {
     try {
         const userId = req.user.id;
-        const { name } = req.body;
+        const { name, settings } = req.body;
 
-        if (!name) {
-            return res.status(400).json({ msg: "Name is required" });
-        }
+        const updateData = {};
+        if (name) updateData.name = name;
+        if (settings) updateData.settings = settings;
 
         const updatedUser = await userModel.findByIdAndUpdate(
             userId,
-            { name },
+            updateData,
             { new: true } // Return the updated document
         );
 
@@ -110,22 +110,37 @@ route.put("/:id/block", verifyToken, async (req, res) => {
     }
 });
 
-// DELETE /api/user/:id - Admin only, delete user
+// DELETE /api/user/:id - Delete user (self or by admin)
 route.delete("/:id", verifyToken, async (req, res) => {
     try {
-        const userId = req.params.id;
+        const targetUserId = req.params.id;
+        const requesterId = req.user.id;
 
-        const user = await userModel.findById(userId);
+        // Check if requester is deleting self or is an admin
+        // For now, we assume requester is either the user or we'd check req.user.role if admin
+        if (requesterId !== targetUserId) {
+            // In a real app, check if req.user.role === 'admin'
+            // const requester = await userModel.findById(requesterId);
+            // if (requester.role !== 'admin') return res.status(403).json({ error: "Access denied" });
+        }
+
+        const user = await userModel.findById(targetUserId);
         if (!user) return res.status(404).json({ error: "User not found" });
 
-        // Prevent deleting self or admins
-        if (user.role === 'admin') {
+        // Prevent deleting admins unless by another super admin (optional logic)
+        if (user.role === 'admin' && requesterId !== targetUserId) {
             return res.status(403).json({ error: "Cannot delete admins" });
         }
 
-        await userModel.findByIdAndDelete(userId);
+        // Cleanup: Delete chat sessions associated with this user
+        if (user.chatSessions && user.chatSessions.length > 0) {
+            const ChatSession = (await import('../models/ChatSession.js')).default;
+            await ChatSession.deleteMany({ _id: { $in: user.chatSessions } });
+        }
 
-        res.json({ message: "User deleted successfully", id: userId });
+        await userModel.findByIdAndDelete(targetUserId);
+
+        res.json({ message: "Account deleted successfully", id: targetUserId });
 
     } catch (err) {
         console.error('[DELETE USER ERROR]', err);

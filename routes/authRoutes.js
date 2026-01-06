@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import UserModel from "../models/User.js";
 import generateTokenAndSetCookies from "../utils/generateTokenAndSetCookies.js";
 import { generateOTP } from "../utils/verifiacitonCode.js";
-import { sendVerificationEmail, sendResetPasswordEmail } from "../utils/Email.js";
+import { sendVerificationEmail, sendResetPasswordEmail, sendPasswordChangeSuccessEmail } from "../utils/Email.js";
 import crypto from "crypto";
 
 const router = express.Router();
@@ -142,6 +142,40 @@ router.post("/forgot-password", async (req, res) => {
   } catch (err) {
     console.error("Forgot Password Error:", err);
     res.status(500).json({ error: "Server error during forgot password" });
+  }
+});
+
+// ====================== CHANGE PASSWORD (LOGGED IN) =======================
+router.post("/reset-password-email", async (req, res) => {
+  try {
+    const { email, currentPassword, newPassword } = req.body;
+
+    // Find user
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    // Verify current password
+    const isCorrect = await bcrypt.compare(currentPassword, user.password);
+    if (!isCorrect) {
+      return res.status(401).json({ error: "Incorrect current password" });
+    }
+
+    // Hash new password
+    const salt = await bcrypt.genSalt(10);
+    user.password = await bcrypt.hash(newPassword, salt);
+
+    await user.save();
+
+    // Send notification email
+    await sendPasswordChangeSuccessEmail(user.email, user.name);
+
+    res.status(200).json({ message: "Password updated successfully" });
+
+  } catch (err) {
+    console.error("Change Password Error:", err);
+    res.status(500).json({ error: "Server error during password update" });
   }
 });
 

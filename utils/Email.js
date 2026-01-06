@@ -1,4 +1,4 @@
-import { Verification_Email_Template, Welcome_Email_Template, Reset_Password_Email_Template } from "./EmailTemplate.js";
+import { Verification_Email_Template, Welcome_Email_Template, Reset_Password_Email_Template, Password_Change_Success_Template } from "./EmailTemplate.js";
 import { resend, transporter } from "./Email.config.js";
 import { marketPlace } from "../consts.js";
 //  console.log(transporter);
@@ -36,6 +36,20 @@ export const sendResetPasswordEmail = async (email, name, resetUrl) => {
       to: [email],
       subject: "Reset Your Password",
       html: Reset_Password_Email_Template.replace("{name}", name).replace("{resetUrl}", resetUrl)
+    })
+    console.log("resend_msg", response);
+  } catch (error) {
+    console.log('Email error', error)
+  }
+}
+
+export const sendPasswordChangeSuccessEmail = async (email, name) => {
+  try {
+    const response = await resend.emails.send({
+      from: `AI-MALL <${process.env.EMAIL}>`,
+      to: [email],
+      subject: "Password Updated Successfully",
+      html: Password_Change_Success_Template.replace("{name}", name)
     })
     console.log("resend_msg", response);
   } catch (error) {

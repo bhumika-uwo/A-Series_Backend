@@ -9,7 +9,12 @@ const messageSchema = new mongoose.Schema({
     required: true
   },
   content: { type: String, required: true },
-  timestamp: { type: Number, default: Date.now }
+  timestamp: { type: Number, default: Date.now },
+  attachment: {
+    type: { type: String, enum: ['image', 'pdf'] },
+    url: String,
+    name: String
+  }
 });
 
 const chatSessionSchema = new mongoose.Schema({

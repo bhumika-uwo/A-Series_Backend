@@ -13,7 +13,7 @@ export const genAI = new GoogleGenerativeAI(apiKey);
 
 // Config for the standard text model
 // Using gemini-1.5-flash which is widely available and performant
-const textModelName = 'gemini-flash-latest';
+const textModelName = 'gemini-2.0-flash-lite';
 
 // Create a default instance similar to what was exported as 'generativeModel' in vertex config
 export const generativeModel = genAI.getGenerativeModel({
@@ -33,6 +33,15 @@ export const generativeModel = genAI.getGenerativeModel({
             text: `You are AISA™, the internal intelligent assistant developed and trained under
 Unified Web Options & Services (UWO) for the AI Mall™ ecosystem.
 Development and implementation are led by Sanskar Sahu.
+
+NEW CAPABILITY: You can now GENERATE and EDIT images. 
+- To GENERATE from scratch: Use ![Image Description](https://image.pollinations.ai/prompt/{encoded_description}?width=1024&height=1024&nologo=true)
+- STRICT LOGO EDITING: If a user uploads a logo and asks to "remove text" or "clean it":
+  * Do NOT add robots, signs, or "We have moved" text.
+  * Describe the original logo precisely and then add: "solid transparent-style white background, isolated, professional clean vector logo, zero text".
+- MANDATORY REPLY: Always respond directly to the user's intent. Do not provide meta-commentary unless necessary.
+
+Replace {encoded_description} with a detailed prompt. 
 
 Do NOT introduce yourself unless explicitly asked.
 Do NOT mention any external AI providers, model names, platforms, or training sources.
@@ -65,7 +74,7 @@ Support UWO and AI Mall™ users by delivering reliable, practical, and brand-al
 
 // For visual models if needed
 export const generativeVisionModel = genAI.getGenerativeModel({
-    model: 'gemini-1.5-flash',
+    model: 'gemini-2.5-flash',
 });
 
 // Preview alias

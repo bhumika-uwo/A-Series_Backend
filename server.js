@@ -22,6 +22,7 @@ import notificationRoutes from './routes/notificationRoutes.js';
 import revenueRoutes from './routes/revenueRoutes.js';
 import supportRoutes from './routes/supportRoutes.js';
 import personalTaskRoutes from './routes/personalTaskRoutes.js';
+import feedbackRoutes from './routes/feedbackRoutes.js';
 
 
 dotenv.config();
@@ -98,8 +99,8 @@ app.use('/api/revenue', revenueRoutes);
 
 // Support Routes
 app.use('/api/support', supportRoutes);
-
-// Personal Assistant Routes
+app.use('/api/personal-task', personalTaskRoutes);
+app.use('/api/feedback', feedbackRoutes);
 app.use('/api/personal-assistant/tasks', personalTaskRoutes);
 
 

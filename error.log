@@ -2322,3 +2322,18 @@ Please retry in 31.040528592s. [{"@type":"type.googleapis.com/google.rpc.Help","
     at async attemptGeneration (file:///C:/Users/sansk/Desktop/AI-MALL/Backend/routes/chatRoutes.js:94:31)
     at async file:///C:/Users/sansk/Desktop/AI-MALL/Backend/routes/chatRoutes.js:103:17
 -------------------------------------------
+
+Timestamp: 2026-01-13T10:26:45.032Z
+Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+Code: undefined
+Env Project: ai-mall-482411
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+    at handleResponseNotOk (file:///G:/AA/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (file:///G:/AA/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContentStream (file:///G:/AA/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:860:22)
+    at async attemptGeneration (file:///G:/AA/A-Series-Backend/routes/chatRoutes.js:94:31)
+    at async file:///G:/AA/A-Series-Backend/routes/chatRoutes.js:103:17
+-------------------------------------------

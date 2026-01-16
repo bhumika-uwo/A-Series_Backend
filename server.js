@@ -23,6 +23,7 @@ import revenueRoutes from './routes/revenueRoutes.js';
 import supportRoutes from './routes/supportRoutes.js';
 import personalTaskRoutes from './routes/personalTaskRoutes.js';
 import feedbackRoutes from './routes/feedbackRoutes.js';
+import paymentRoutes from './routes/paymentRoutes.js';
 
 
 dotenv.config();
@@ -37,7 +38,12 @@ connectDB().then(() => {
 
 // Middleware
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://192.168.29.172:5173', 'http://192.168.56.1:5173'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(cookieParser())
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
@@ -102,6 +108,7 @@ app.use('/api/support', supportRoutes);
 app.use('/api/personal-task', personalTaskRoutes);
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/personal-assistant/tasks', personalTaskRoutes);
+app.use('/api/payments', paymentRoutes);
 
 
 // Global Error Handler

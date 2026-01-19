@@ -23,11 +23,8 @@ import revenueRoutes from './routes/revenueRoutes.js';
 import supportRoutes from './routes/supportRoutes.js';
 import personalTaskRoutes from './routes/personalTaskRoutes.js';
 import feedbackRoutes from './routes/feedbackRoutes.js';
-<<<<<<< HEAD
 import voiceRoutes from './routes/voiceRoutes.js';
-=======
 import paymentRoutes from './routes/paymentRoutes.js';
->>>>>>> b7f3ca0a19f5798dc23cd843750316dcad2f2440
 
 
 dotenv.config();

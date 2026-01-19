@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
 
 const transactionSchema = mongoose.Schema({
+    transactionId: {
+        type: String,
+        required: true,
+        unique: true
+    },
     agentId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Agent',

@@ -127,4 +127,4 @@ app.listen(PORT, () => {
     KeyID: process.env.RAZORPAY_KEY_ID ? `${process.env.RAZORPAY_KEY_ID.substring(0, 8)}...` : "MISSING",
     Secret: process.env.RAZORPAY_KEY_SECRET ? "PRESENT" : "MISSING"
   });
-});
+}); // Environment variables updated loop restart

@@ -6,6 +6,7 @@ import userModel from "../models/User.js";
 import { verifyToken } from "../middleware/authorization.js";
 import { uploadToCloudinary } from "../services/cloudinary.service.js";
 import mammoth from "mammoth";
+import axios from "axios";
 
 
 
@@ -15,9 +16,75 @@ import mammoth from "mammoth";
 const router = express.Router();
 // Get all chat sessions (summary)
 router.post("/", async (req, res) => {
-  const { content, history, systemInstruction, image, document } = req.body;
+  const { content, history, systemInstruction, image, document, model } = req.body;
 
   try {
+    // --- MULTI-MODEL DISPATCHER ---
+    if (model && !model.startsWith('gemini')) {
+      try {
+        let reply = "";
+
+        // Standard OpenAI Format Preparation
+        const formattedMessages = [
+          { role: 'system', content: systemInstruction || "You are a helpful assistant." },
+          ...(history || []).map(msg => ({
+            role: msg.role === 'model' ? 'assistant' : 'user',
+            content: msg.content
+          })),
+          { role: 'user', content: content }
+        ];
+
+        if (model.includes('groq')) {
+          const resp = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
+            model: 'llama-3.3-70b-versatile',
+            messages: formattedMessages
+          }, { headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}` } });
+          reply = resp.data.choices[0].message.content;
+
+        } else if (model.includes('openai')) {
+          const resp = await axios.post('https://api.openai.com/v1/chat/completions', {
+            model: 'gpt-4o',
+            messages: formattedMessages
+          }, { headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` } });
+          reply = resp.data.choices[0].message.content;
+
+        } else if (model.includes('kimi')) {
+          const kimiModel = model.includes('k1.5') ? 'moonshot-v1-32k' : 'moonshot-v1-8k';
+          const resp = await axios.post('https://api.moonshot.ai/v1/chat/completions', {
+            model: kimiModel,
+            messages: formattedMessages
+          }, { headers: { Authorization: `Bearer ${process.env.KIMI_API_KEY}` } });
+          reply = resp.data.choices[0].message.content;
+
+        } else if (model.includes('claude')) {
+          // Claude Specific Format
+          const claudeMsgs = (history || []).map(msg => ({
+            role: msg.role === 'model' ? 'assistant' : 'user',
+            content: msg.content
+          }));
+          claudeMsgs.push({ role: 'user', content: content });
+
+          const resp = await axios.post('https://api.anthropic.com/v1/messages', {
+            model: 'claude-3-opus-20240229',
+            max_tokens: 4096,
+            system: systemInstruction,
+            messages: claudeMsgs
+          }, { headers: { 'x-api-key': process.env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' } });
+          reply = resp.data.content[0].text;
+        }
+
+
+        return res.status(200).json({ reply });
+
+      } catch (apiError) {
+        console.error(`Error calling ${model}:`, apiError.response?.data || apiError.message);
+        // Fallback: Do not return 500. Let it fall through to Gemini logic.
+        // We will append a note to the final reply later if needed, or just let Gemini answer.
+        console.log(`Falling back to Gemini due to ${model} failure.`);
+      }
+    }
+
+    // --- FALLBACK TO GEMINI (DEFAULT) ---
     // Construct parts from history + current message
     let parts = [];
 
@@ -148,6 +215,8 @@ router.post("/", async (req, res) => {
     if (!reply) {
       reply = "I understood your request but couldn't generate a text response.";
     }
+
+
 
     return res.status(200).json({ reply });
   } catch (err) {

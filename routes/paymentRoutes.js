@@ -21,6 +21,11 @@ router.post('/create-order', verifyToken, async (req, res) => {
         console.log("Create Order Request Body:", req.body);
         const { amount, agentId, plan } = req.body;
 
+        // DEBUG: Check Environment Variables on Render
+        const keyId = process.env.RAZORPAY_KEY_ID;
+        console.log(`[DEBUG] Razorpay Key ID Configured: ${keyId ? `'${keyId.substring(0, 12)}...'` : 'MISSING'}`);
+        console.log(`[DEBUG] Razorpay Key Secret Configured: ${process.env.RAZORPAY_KEY_SECRET ? 'PRESENT (Length: ' + process.env.RAZORPAY_KEY_SECRET.length + ')' : 'MISSING'}`);
+
         if (!amount || !agentId) {
             return res.status(400).json({ error: 'Amount and Agent ID are required' });
         }

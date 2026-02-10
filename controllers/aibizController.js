@@ -1,5 +1,5 @@
 import AIBIZHistory from "../models/AIBIZHistory.js";
-import { genAI } from "../config/gemini.js";
+import { genAIInstance as genAI } from "../config/vertex.js";
 import mongoose from "mongoose";
 
 // Using gemini-1.5-flash as it is the standard model configured in this project

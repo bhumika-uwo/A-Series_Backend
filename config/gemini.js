@@ -96,3 +96,9 @@ export const generativeVisionModel = genAI.getGenerativeModel({
 
 // Preview alias
 export const generativeModelPreview = generativeModel;
+
+// Compatibility exports for switching from Vertex AI
+export const modelName = textModelName;
+export const genAIInstance = {
+    getGenerativeModel: (options) => genAI.getGenerativeModel(options)
+};

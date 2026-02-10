@@ -1,6 +1,6 @@
 import pdfParse from 'pdf-parse/lib/pdf-parse.js';
 
-import { generativeModel } from '../config/gemini.js';
+import { generativeModel } from '../config/vertex.js';
 
 /**
  * Extracts text content from a PDF buffer.

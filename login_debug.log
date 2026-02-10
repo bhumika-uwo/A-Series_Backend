@@ -137,3 +137,39 @@
 [2026-02-07T06:43:19.314Z] Login Attempt for: admin@uwo24.com
 [LOGIN DEBUG] User found: admin@uwo24.com, comparing passwords...
 [LOGIN DEBUG] Password matching! Success.
+
+[2026-02-08T14:13:41.974Z] Login Attempt for: admin@uwo24.com
+[LOGIN DEBUG] User found: admin@uwo24.com, comparing passwords...
+[LOGIN DEBUG] Password matching! Success.
+
+[2026-02-09T08:56:27.161Z] Login Attempt for: admin@uwo24.com
+[LOGIN DEBUG] User found: admin@uwo24.com, comparing passwords...
+[LOGIN DEBUG] Password matching! Success.
+
+[2026-02-09T12:21:30.571Z] Login Attempt for: aditilakhera0@gmail.com
+[LOGIN DEBUG] User found: aditilakhera0@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password matching! Success.
+
+[2026-02-10T06:16:06.443Z] Login Attempt for: bp7249951@gmail.com
+[LOGIN DEBUG] User found: bp7249951@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password matching! Success.
+
+[2026-02-10T07:24:57.145Z] Login Attempt for: bp7249951@gmail.com
+[LOGIN DEBUG] User found: bp7249951@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password mismatch for: bp7249951@gmail.com
+
+[2026-02-10T07:25:05.280Z] Login Attempt for: bhoomzpatel6@gmail.com
+[LOGIN DEBUG] User found: bhoomzpatel6@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password mismatch for: bhoomzpatel6@gmail.com
+
+[2026-02-10T07:26:07.634Z] Login Attempt for: aditilakhera0@gmail.com
+[LOGIN DEBUG] User found: aditilakhera0@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password matching! Success.
+
+[2026-02-10T09:17:18.790Z] Login Attempt for: bhoomzpatel6@gmail.com
+[LOGIN DEBUG] User found: bhoomzpatel6@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password mismatch for: bhoomzpatel6@gmail.com
+
+[2026-02-10T09:17:47.817Z] Login Attempt for: aditilakhera0@gmail.com
+[LOGIN DEBUG] User found: aditilakhera0@gmail.com, comparing passwords...
+[LOGIN DEBUG] Password matching! Success.

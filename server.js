@@ -4,6 +4,7 @@ import 'dotenv/config';
 import cors from "cors";
 import connectDB from "./config/db.js";
 import chatRoutes from "./routes/chatRoutes.js";
+
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import agentRoutes from "./routes/agentRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -43,8 +44,8 @@ connectDB().then(() => {
 app.use(cors({
   origin: true, // Allow any origin in development
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-device-fingerprint']
 }));
 app.use(cookieParser())
 app.use(express.json({ limit: "50mb" }));
@@ -77,6 +78,7 @@ app.use('/api/user', userRoute)
 
 // Chat Routes: /api/chat (GET sessions), /api/chat/:id (GET history), /api/chat/:id/message (POST message)
 app.use('/api/chat', chatRoutes);
+
 
 // Auth Routes: /api/auth/login, /api/auth/signup
 app.use('/api/auth', authRoutes);

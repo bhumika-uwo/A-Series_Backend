@@ -1,0 +1,3488 @@
+﻿
+> backend2@1.0.0 dev
+> npx nodemon server.js
+
+[33m[nodemon] 3.1.11[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+node.exe : ΓÜá∩╕Å Email 
+credentials missing. 
+Nodemailer disabled.
+At line:1 char:1
++ & "E:\/node.exe" "E:\/node_
+modules/npm/bin/npm-cli.js" 
+run dev
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (ΓÜá∩╕Å   
+  Email cr...ailer disable   
+ d.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] PATCH /chat/ml61czn96ds6mwdrwdc/title
+[CHAT] Successfully renamed session ml61czn96ds6mwdrwdc to "my" for user 6968c8d3a89abe0c0047f71f
+[API DEBUG] DELETE /chat/ml61czn96ds6mwdrwdc
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "generate a image of a wolf..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[API DEBUG] GET /notifications
+[MEDIA GEN] Analyzing reply: "{"action": "generate_image", "prompt": "a wolf"}..."
+[MEDIA GEN] Found trigger JSON: {"action": "generate_image", "prompt": "a wolf"}
+[IMAGE GEN] Calling generator for: a wolf
+[VERTEX IMAGE] Triggered for: "a wolf"
+[VERTEX IMAGE FALLBACK] 
+Reason: Request failed with 
+status code 403. Switching 
+to Pollinations.
+[PROXY DOWNLOAD] Fetching from Pollinations: https://image.pollinations.ai/prompt/a%20wolf?width=1024&height=1024&nologo=true&model=flux&seed=898319
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[PROXY FAILED] timeout of 
+15000ms exceeded. Returning 
+direct link.
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[API DEBUG] GET /user
+[API DEBUG] GET /chat
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 2 messages.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[API DEBUG] GET /user
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 2 messages.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 2 messages.
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 2 messages.
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 2 messages.
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[API DEBUG] GET /notifications
+[MODE DETECTION] Detected mode: CODING_HELP for message: "give me code for adding 4 numbers in c++..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: Hinglish
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[MEDIA GEN] Analyzing reply: "Here's a C++ code snippet to add four numbers! ≡ƒÆ╗
+
+---
+
+**Adding Four Numbers in C++**
+
+This program..."
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /notifications
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] GET /notifications
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[ERROR] [Cloudinary Stream 
+Error]: {"message":"File 
+size too large. Got 
+18234551. Maximum is 10485760
+.","name":"Error","http_code"
+:400}
+Cloudinary upload failed for 
+attachment: {
+  message: 'File size too 
+large. Got 18234551. Maximum 
+is 10485760.',
+  name: 'Error',
+  http_code: 400
+}
+RangeError 
+[ERR_OUT_OF_RANGE]: The 
+value of "offset" is out of 
+range. It must be >= 0 && <= 
+17825792. Received 17825794
+    at validateOffset 
+(node:buffer:125:3)
+    at Buffer.write 
+(node:buffer:1137:5)
+    at Object.encodeUTF8Into 
+(D:\A_Series\A-Series_Backend
+\node_modules\mongoose\node_m
+odules\bson\lib\bson.cjs:305:
+58)
+    at serializeString (D:\A_
+Series\A-Series_Backend\node_
+modules\mongoose\node_modules
+\bson\lib\bson.cjs:3491:44)
+    at serializeInto (D:\A_Se
+ries\A-Series_Backend\node_mo
+dules\mongoose\node_modules\b
+son\lib\bson.cjs:4038:25)
+    at serializeObject (D:\A_
+Series\A-Series_Backend\node_
+modules\mongoose\node_modules
+\bson\lib\bson.cjs:3639:22)
+    at serializeInto (D:\A_Se
+ries\A-Series_Backend\node_mo
+dules\mongoose\node_modules\b
+son\lib\bson.cjs:3849:29)
+    at serializeObject (D:\A_
+Series\A-Series_Backend\node_
+modules\mongoose\node_modules
+\bson\lib\bson.cjs:3639:22)
+    at serializeInto (D:\A_Se
+ries\A-Series_Backend\node_mo
+dules\mongoose\node_modules\b
+son\lib\bson.cjs:4060:29)
+    ... collapsed 6 
+duplicate lines matching 
+above 2 lines 3 times...
+    at Object.serialize (D:\A
+_Series\A-Series_Backend\node
+_modules\mongoose\node_module
+s\bson\lib\bson.cjs:4571:32) 
+{
+  code: 'ERR_OUT_OF_RANGE'
+}
+[API DEBUG] POST /chat
+[MODE DETECTION] Processing message: "convert this document" with 1 attachments
+[MODE DETECTION] Detected conversion keyword: "convert". Setting mode to FILE_CONVERSION.
+[MODE DETECTION] Detected mode: FILE_CONVERSION for message: "Convert this document..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[FILE CONVERSION] Conversion request detected
+[FILE CONVERSION] Attachments count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[FILE CONVERSION] AI Response: ```json
+{
+  "action": "file_conversion",
+  "source_format": "pdf",
+  "target_format": "docx",
+  "file_name": "document"
+}
+```
+[FILE CONVERSION] Parsed params: {
+  action: 'file_conversion',
+  source_format: 'pdf',
+  target_format: 'docx',
+  file_name: 'document'
+}
+[FILE CONVERSION] Conversion successful: document_converted.docx
+[CHAT] Conversion successful, skipping text generation.
+[MEDIA GEN] Analyzing reply: "Here is your converted document...."
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "generate an image of a cute puppy running in a gar..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[MEDIA GEN] Analyzing reply: "{"action": "generate_image", "prompt": "a cute puppy running in a garden"}..."
+[MEDIA GEN] Found trigger JSON: {"action": "generate_image", "prompt": "a cute puppy running in a garden"}
+[IMAGE GEN] Calling generator for: a cute puppy running in a garden
+[VERTEX IMAGE] Triggered for: "a cute puppy running in a garden"
+[API DEBUG] GET /notifications
+[VERTEX IMAGE FALLBACK] 
+Reason: Request failed with 
+status code 403. Switching 
+to Pollinations.
+[VERTEX IMAGE FALLBACK] Returning direct link: https://image.pollinations.ai/prompt/a%20cute%20puppy%20running%20in%20a%20garden?width=1024&height=1024&nologo=true&model=flux&seed=289445
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /image/generate
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] POST /image/generate
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] POST /image/generate
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "geneeatae  a image of a lion..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[API DEBUG] GET /notifications
+[MEDIA GEN] Analyzing reply: "{"action": "generate_image", "prompt": "a lion"}..."
+[MEDIA GEN] Found trigger JSON: {"action": "generate_image", "prompt": "a lion"}
+[IMAGE GEN] Calling generator for: a lion
+[VERTEX IMAGE] Triggered for: "a lion"
+[VERTEX IMAGE FALLBACK] 
+Reason: Request failed with 
+status code 403. Switching 
+to Pollinations.
+[VERTEX IMAGE FALLBACK] Returning direct link: https://image.pollinations.ai/prompt/a%20lion?width=1024&height=1024&nologo=true&model=flux&seed=953431
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[API DEBUG] GET /notifications
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "generate a imag eof a wolf..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-1.5-flash
+[API DEBUG] GET /notifications
+[GEMINI] Model 
+gemini-1.5-flash failed: 
+[GoogleGenerativeAI Error]: 
+Error fetching from https://g
+enerativelanguage.googleapis.
+com/v1beta/models/gemini-1.5-
+flash:generateContent: [404 
+Not Found] 
+models/gemini-1.5-flash is 
+not found for API version 
+v1beta, or is not supported 
+for generateContent. Call 
+ListModels to see the list 
+of available models and 
+their supported methods.
+AISA backend error details: {
+  message: 'Model generation 
+failed: [GoogleGenerativeAI 
+Error]: Error fetching from h
+ttps://generativelanguage.goo
+gleapis.com/v1beta/models/gem
+ini-1.5-flash:generateContent
+: [404 Not Found] 
+models/gemini-1.5-flash is 
+not found for API version 
+v1beta, or is not supported 
+for generateContent. Call 
+ListModels to see the list 
+of available models and 
+their supported methods.',
+  stack: 'Error: Model 
+generation failed: 
+[GoogleGenerativeAI Error]: 
+Error fetching from https://g
+enerativelanguage.googleapis.
+com/v1beta/models/gemini-1.5-
+flash:generateContent: [404 
+Not Found] 
+models/gemini-1.5-flash is 
+not found for API version 
+v1beta, or is not supported 
+for generateContent. Call 
+ListModels to see the list 
+of available models and 
+their supported methods.\n' +
+    '    at 
+attemptGeneration (file:///D:
+/A_Series/A-Series_Backend/ro
+utes/chatRoutes.js:548:15)\n'
+ +
+    '    at process.processTi
+cksAndRejections (node:intern
+al/process/task_queues:103:5)
+\n' +
+    '    at async file:///D:/
+A_Series/A-Series_Backend/rou
+tes/chatRoutes.js:559:19',
+  code: undefined,
+  details: undefined
+}
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat/mlf2o1e4kfnvnl5jkc
+[CHAT] Found session mlf2o1e4kfnvnl5jkc with 2 messages.
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat/mlf2o1e4kfnvnl5jkc
+[API DEBUG] GET /user
+[CHAT] Found session mlf2o1e4kfnvnl5jkc with 2 messages.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat/mlf2o1e4kfnvnl5jkc
+[CHAT] Found session mlf2o1e4kfnvnl5jkc with 2 messages.
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf2o1e4kfnvnl5jkc/message
+[CHAT] Associated session 6989c0f8db19e82dfed6dba2 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "generate  aimge of lion..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[MEDIA GEN] Analyzing reply: "{"action": "generate_image", "prompt": "a lion"}..."
+[MEDIA GEN] Found trigger JSON: {"action": "generate_image", "prompt": "a lion"}
+[IMAGE GEN] Calling generator for: a lion
+[VERTEX IMAGE] Triggered for: "a lion"
+[VERTEX IMAGE] Using Project ID: a-series-484205
+[API DEBUG] GET /notifications
+[VERTEX IMAGE] Calling endpoint: https://us-central1-aiplatform.googleapis.com/v1/projects/a-...
+[VERTEX IMAGE FALLBACK] 
+Reason: Request failed with 
+status code 403. Switching 
+to Pollinations.
+[VERTEX IMAGE FALLBACK] Returning direct link: https://pollinations.ai/p/a%20lion?width=1024&height=1024&nologo=true&seed=906623
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /chat/mlf2o1e4kfnvnl5jkc/message
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[CHAT] Associated session 6989c0f8db19e82dfed6dba2 with user 6968c8d3a89abe0c0047f71f.
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[API DEBUG] GET /chat
+[API DEBUG] GET /notifications
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 10 messages.
+[API DEBUG] GET /user
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[API DEBUG] GET /chat
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 10 messages.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 10 messages.
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat/mlf1c9qkvpofr5xw5p9
+[API DEBUG] GET /chat
+[CHAT] Found session mlf1c9qkvpofr5xw5p9 with 10 messages.
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "generate a imge of a tiger..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[API DEBUG] GET /notifications
+[MEDIA GEN] Analyzing reply: "{"action": "generate_image", "prompt": "a tiger"}..."
+[MEDIA GEN] Found trigger JSON: {"action": "generate_image", "prompt": "a tiger"}
+[IMAGE GEN] Calling generator for: a tiger
+[VERTEX IMAGE] Triggered for: "a tiger"
+[VERTEX IMAGE] Authenticating with Vertex AI...
+[VERTEX IMAGE] Project ID: a-series-484205
+[VERTEX IMAGE] Using Application Default Credentials (ADC)
+[VERTEX IMAGE] Getting access token...
+[VERTEX IMAGE] Token obtained successfully
+[VERTEX IMAGE] Calling endpoint: https://us-central1-aiplatform.googleapis.com/v1/projects/a-...
+[VERTEX IMAGE ERROR] 
+Permission 'aiplatform.endpoi
+nts.predict' denied on 
+resource '//aiplatform.google
+apis.com/projects/a-series-48
+4205/locations/us-central1/pu
+blishers/google/models/imagen
+-3.0-generate-002' (or it 
+may not exist).
+[VERTEX IMAGE ERROR] Full 
+error: {
+  error: {
+    code: 403,
+    message: "Permission 'aip
+latform.endpoints.predict' 
+denied on resource '//aiplatf
+orm.googleapis.com/projects/a
+-series-484205/locations/us-c
+entral1/publishers/google/mod
+els/imagen-3.0-generate-002' 
+(or it may not exist).",
+    status: 
+'PERMISSION_DENIED',
+    details: [ [Object] ]
+  }
+}
+[IMAGE GEN] Vertex AI 
+failed: Vertex AI Image 
+Generation failed: 
+Permission 'aiplatform.endpoi
+nts.predict' denied on 
+resource '//aiplatform.google
+apis.com/projects/a-series-48
+4205/locations/us-central1/pu
+blishers/google/models/imagen
+-3.0-generate-002' (or it 
+may not exist).
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /chat/mlf1c9qkvpofr5xw5p9/message
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[CHAT] Associated session 6989b844db19e82dfed6db22 with user 6968c8d3a89abe0c0047f71f.
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[API DEBUG] GET /notifications
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: us-central1
+Γ£à Vertex AI initialized successfully with ADC
+file:///D:/A_Series/A-Series_
+Backend/config/vertex.js:80
+export const generativeModel 
+= useVertexAI
+                             
+  ^
+
+ReferenceError: useVertexAI 
+is not defined
+    at file:///D:/A_Series/A-
+Series_Backend/config/vertex.
+js:80:32
+    at ModuleJob.run (node:in
+ternal/modules/esm/module_job
+:413:25)
+    at process.processTicksAn
+dRejections (node:internal/pr
+ocess/task_queues:103:5)
+    at async onImport.tracePr
+omise.__proto__ (node:interna
+l/modules/esm/loader:660:26)
+    at async asyncRunEntryPoi
+ntWithESMLoader (node:interna
+l/modules/run_main:101:5)
+
+Node.js v24.13.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: us-central1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: us-central1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: us-central1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: us-central1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: south
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: asia-south1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Chat Location: asia-south1 (Gemini 2.5 Flash)
+≡ƒôì Image Location: us-central1 (Imagen 3.0)
+Γ£à Vertex AI (Chat) initialized successfully with ADC
+Γ£à Vertex AI (Images) initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Chat Location: asia-south1 (Gemini 2.5 Flash)
+≡ƒôì Image Location: us-central1 (Imagen 3.0)
+Γ£à Vertex AI (Chat) initialized successfully with ADC
+Γ£à Vertex AI (Images) initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: a-series-484205
+≡ƒôì Location: asia-south1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: ai-mall-484810
+≡ƒôì Location: asia-south1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[API DEBUG] GET /notifications
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: ai-mall-484810
+≡ƒôì Location: asia-south1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: ai-mall-484810
+≡ƒôì Location: asia-south1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[API DEBUG] GET /notifications
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /user
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat/mlf3szsr898krhu7f12
+[API DEBUG] GET /chat
+[CHAT] Found session mlf3szsr898krhu7f12 with 2 messages.
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat/mlf3szsr898krhu7f12
+[API DEBUG] GET /user
+[CHAT] Found session mlf3szsr898krhu7f12 with 2 messages.
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /chat/mlf3szsr898krhu7f12/message
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[CHAT] Associated session 6989c86fdb19e82dfed6dc24 with user 6968c8d3a89abe0c0047f71f.
+[API DEBUG] POST /chat
+[MODE DETECTION] Detected mode: NORMAL_CHAT for message: "generate a imge of lion..."
+[VOICE ASSISTANT] Intent: casual_chat, Language: English
+[DEBUG] Starting Web Search check...
+[DEBUG] Web Search check complete.
+[GEMINI] Starting generation attempt...
+[GEMINI] Trying model: gemini-2.5-flash
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[MEDIA GEN] Analyzing reply: "{"action": "generate_image", "prompt": "a majestic lion"}..."
+[MEDIA GEN] Found trigger JSON: {"action": "generate_image", "prompt": "a majestic lion"}
+[IMAGE GEN] Calling generator for: a majestic lion
+[VERTEX IMAGE] Triggered for: "a majestic lion"
+[VERTEX IMAGE] Authenticating with Vertex AI...
+[VERTEX IMAGE] Project ID: ai-mall-484810
+[VERTEX IMAGE] Using Application Default Credentials (ADC)
+[VERTEX IMAGE] Getting access token...
+[VERTEX IMAGE] Token obtained successfully
+[VERTEX IMAGE] Calling endpoint: https://asia-south1-aiplatform.googleapis.com/v1/projects/ai...
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[VERTEX IMAGE] Image received successfully. Size: 2147856
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /chat/mlf3szsr898krhu7f12/message
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[CHAT] Associated session 6989c86fdb19e82dfed6dc24 with user 6968c8d3a89abe0c0047f71f.
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /chat
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /chat
+[API DEBUG] POST /agents/get_my_agents
+[GET MY AGENTS] Fetching for userId: 6968c8d3a89abe0c0047f71f
+[GET MY AGENTS] Success. User: admin@uwo24.com, Agent count: 1
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] DELETE /chat/mlbwfezebkg2f3gjub
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[API DEBUG] GET /notifications
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node server.js`[39m
+MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Vertex AI initializing with project: ai-mall-484810
+≡ƒôì Location: asia-south1
+Γ£à Vertex AI initialized successfully with ADC
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+ΓÜá∩╕Å Email credentials 
+missing. Nodemailer disabled.
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[API DEBUG] GET /notifications
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.

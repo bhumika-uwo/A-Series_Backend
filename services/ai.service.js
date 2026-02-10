@@ -1,11 +1,12 @@
-const { MongoDBAtlasVectorSearch } = require("@langchain/mongodb");
-const { HuggingFaceTransformersEmbeddings } = require("@langchain/community/embeddings/hf_transformers");
-const { RecursiveCharacterTextSplitter } = require("@langchain/textsplitters");
-const mongoose = require("mongoose");
-const logger = require("../utils/logger");
-const Knowledge = require("../models/Knowledge.model");
-const { Worker } = require('worker_threads');
-const path = require('path');
+import { MongoDBAtlasVectorSearch } from "@langchain/mongodb";
+import { HuggingFaceTransformersEmbeddings } from "@langchain/community/embeddings/huggingface_transformers";
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
+import mongoose from "mongoose";
+import logger from "../utils/logger.js";
+import Knowledge from "../models/Knowledge.model.js";
+import { Worker } from 'worker_threads';
+import path from 'path';
+import groqService from './groq.service.js';
 
 // Initialize Groq Chat Model - REMOVED (Replaced by groq.service.js)
 // const model = new ChatGroq({ ... });
@@ -41,7 +42,7 @@ const initializeVectorStore = async () => {
 
 // Helper: Run embedding task in worker - REMOVED
 
-exports.storeDocument = async (text, docId = null) => {
+export const storeDocument = async (text, docId = null) => {
     try {
         await initializeVectorStore();
 
@@ -76,9 +77,7 @@ exports.storeDocument = async (text, docId = null) => {
     }
 };
 
-const groqService = require('./groq.service');
-
-exports.chat = async (message, activeDocContent = null) => {
+export const chat = async (message, activeDocContent = null) => {
     try {
         if (!message || typeof message !== 'string') {
             message = String(message || "");
@@ -87,14 +86,6 @@ exports.chat = async (message, activeDocContent = null) => {
         // PRIORITY 1: Chat-Uploaded Document
         if (activeDocContent && activeDocContent.length > 0) {
             logger.info("[Chat Routing] Using Active Chat Document (Priority 1). Skipping RAG.");
-            // Pass the document text directly. 
-            // We prepend a special marker text so GroqService knows it's a Chat Doc vs Company Doc?
-            // Actually GroqService just takes context. We can handle labeling here if we want, or just rely on context prompt.
-            // Let's rely on GroqService, but we need to tell it SOURCE via prompt?
-            // Simpler: Just rely on context.
-            // Wait, we need to label it "📄 From Chat-Uploaded Document". 
-            // GroqService logic uses "📄 From Your Document" generally. We might want to customize labeling.
-            // For now, let's just pass context. The generic "From Your Document" fits this use case well.
             return await groqService.askGroq(message, activeDocContent);
         }
 
@@ -139,12 +130,10 @@ exports.chat = async (message, activeDocContent = null) => {
                     .join("\n\n");
                 logger.info(`[RAG] Found ${relevantDocs.length} RELEVANT docs (Score >= ${THRESHOLD}).`);
 
-                // IMPORTANT: If we found RAG docs, the prompt in GroqService interprets this as "Your Document".
-                // Ideally we want to distinguish "Company Documents" vs "Chat Upload".
-                // Since GroqService just has one "Context" slot, we can prepend a header to contextText.
+                // Prepend source header
                 contextText = "SOURCE: COMPANY KNOWLEDGE BASE\n\n" + contextText;
 
-                // PRIORITY 2: Answer from Company RAG
+                // Answer from Company RAG
                 return await groqService.askGroq(message, contextText);
 
             } else {
@@ -163,7 +152,7 @@ exports.chat = async (message, activeDocContent = null) => {
 };
 
 // Initialize from DB (Now just a placeholder/connection check)
-exports.initializeFromDB = async () => {
+export const initializeFromDB = async () => {
     try {
         logger.info("Using MongoDB Atlas Vector Search. Persistence is handled natively.");
         await initializeVectorStore();
@@ -172,11 +161,14 @@ exports.initializeFromDB = async () => {
     }
 };
 
-exports.reloadVectorStore = async () => {
+export const reloadVectorStore = async () => {
     vectorStore = null;
-    await exports.initializeFromDB();
+    await initializeFromDB();
 };
 
-exports.ragChat = async (message) => {
-    return exports.chat(message);
+export const ragChat = async (message) => {
+    return chat(message);
 };
+
+export default { storeDocument, chat, initializeFromDB, reloadVectorStore, ragChat };
+

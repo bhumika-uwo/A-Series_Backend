@@ -1,0 +1,167 @@
+
+Timestamp: 2026-02-09T10:55:59.994Z
+Error: Model generation failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-09T11:19:37.305Z
+Error: Model generation failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] The service is currently unavailable.
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] The service is currently unavailable.
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-09T11:30:18.719Z
+Error: Model generation failed: Timeout
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: Timeout
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-09T11:31:45.906Z
+Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-09T11:33:54.758Z
+Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-09T11:40:35.164Z
+Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-09T11:43:43.865Z
+Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+Code: undefined
+Env Project: a-series-484205
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.ClientError]: got status: 403 Forbidden. {"error":{"code":403,"message":"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash' (or it may not exist).","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"IAM_PERMISSION_DENIED","domain":"aiplatform.googleapis.com","metadata":{"resource":"projects/a-series-484205/locations/asia-south1/publishers/google/models/gemini-2.5-flash","permission":"aiplatform.endpoints.predict"}}]}}
+    at attemptGeneration (file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///D:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-10T06:18:12.043Z
+Error: Model generation failed: Timeout
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: Timeout
+    at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at runNextTicks (node:internal/process/task_queues:64:5)
+    at process.processTimers (node:internal/timers:538:9)
+    at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-10T07:05:27.927Z
+Error: Model generation failed: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-10T07:26:43.829Z
+Error: Model generation failed: Timeout
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: Timeout
+    at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-10T07:38:03.092Z
+Error: Model generation failed: [VertexAI.ClientError]: got status: 404 Not Found. {"error":{"code":404,"message":"Publisher Model `projects/ai-mall-484810/locations/us-central1/publishers/google/models/gemini-1.5-flash-001` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions","status":"NOT_FOUND"}}
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.ClientError]: got status: 404 Not Found. {"error":{"code":404,"message":"Publisher Model `projects/ai-mall-484810/locations/us-central1/publishers/google/models/gemini-1.5-flash-001` was not found or your project does not have access to it. Please ensure you are using a valid model version. For more information, see: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions","status":"NOT_FOUND"}}
+    at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-10T07:45:00.174Z
+Error: Model generation failed: Timeout
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: Timeout
+    at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------
+
+Timestamp: 2026-02-10T08:26:27.286Z
+Error: Model generation failed: Timeout
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: Timeout
+    at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
+    at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
+-------------------------------------------

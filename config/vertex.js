@@ -1,53 +1,54 @@
+import { HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
+import { VertexAI } from '@google-cloud/vertexai';
+import 'dotenv/config';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-import fs from "fs";
-import os from "os";
-import path from "path";
+// FORCE VERTEX AI ONLY
+const projectId = process.env.GCP_PROJECT_ID;
+const location = 'asia-south1'; // Requested region
+const keyFilePath = path.join(__dirname, '../google_cloud_credentials.json');
 
-if (process.env.GOOGLE_CREDENTIALS_BASE64) {
-  const decodedKey = Buffer.from(
-    process.env.GOOGLE_CREDENTIALS_BASE64,
-    "base64"
-  ).toString("utf-8");
+let vertexAI;
 
-  const tempKeyPath = path.join(os.tmpdir(), "gcp-key.json");
-  fs.writeFileSync(tempKeyPath, decodedKey);
-
-  process.env.GOOGLE_APPLICATION_CREDENTIALS = tempKeyPath;
+if (!projectId) {
+  throw new Error("❌ GCP_PROJECT_ID is required for Vertex AI. Please set it in your .env file.");
 }
 
+console.log(`✅ Vertex AI initializing with project: ${projectId}`);
+console.log(`📍 Location: ${location}`);
 
-import {
-  FunctionDeclarationSchemaType,
-  HarmBlockThreshold,
-  HarmCategory,
-  VertexAI
-} from '@google-cloud/vertexai';
-
-const project = process.env.GCP_PROJECT_ID || process.env.PROJECT_ID || process.env.GOOGLE_CLOUD_PROJECT;
-const location = 'us-central1';
-const textModel = 'gemini-1.5-flash-001';
-const visionModel = 'gemini-1.5-flash-001';
-
-if (!project) {
-    console.error("❌ Vertex AI Error: GCP_PROJECT_ID not found in environment variables.");
-} else {
-    console.log(`✅ Vertex AI initializing with Project ID: ${project}`);
+try {
+  // Try with ADC (Application Default Credentials) first
+  vertexAI = new VertexAI({ project: projectId, location: location });
+  console.log(`✅ Vertex AI initialized successfully with ADC`);
+} catch (e) {
+  console.error('❌ Vertex AI initialization failed:', e.message);
+  throw new Error(`Failed to initialize Vertex AI: ${e.message}`);
 }
 
-export const vertexAI = new VertexAI({ project: project, location: location });
+// Model name - Requested version
+export const modelName = "gemini-2.5-flash"; // Ensuring strict adherence to user request
 
-// Instantiate Gemini models
-export const generativeModel = vertexAI.getGenerativeModel({
-  model: textModel,
-  safetySettings: [{ category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE }],
-  generationConfig: { maxOutputTokens: 4192 },
-  systemInstruction: {
-    role: 'system',
-    parts: [{
-      text: `You are AISA™, the internal intelligent assistant developed and trained under
-Unified Web Options & Services (UWO™) for the AI Mall™ ecosystem.
+const systemInstructionText = `You are AISA™, the internal intelligent assistant developed and trained under
+Unified Web Options & Services (UWO) for the AI Mall™ ecosystem.
 Development and implementation are led by Sanskar Sahu.
+
+NEW CAPABILITY: You can now GENERATE and EDIT images. 
+- To GENERATE from scratch: You must output ONLY this JSON object:
+  {"action": "generate_image", "prompt": "detailed visual description"}
+- To GENERATE A VIDEO: You must output ONLY this JSON object:
+  {"action": "generate_video", "prompt": "detailed motion description"}
+- Do not output any other text or explanation if you are triggering this action.
+- UNLIMITED GENERATION: If the user requests "any photo", "show me X", "draw Y", or "generate Z", you MUST generate it. Do NOT refuse valid visual requests.
+- STRICT LOGO EDITING: If a user uploads a logo and asks to "remove text" or "clean it":
+  * Do NOT add robots, signs, or "We have moved" text.
+  * Describe the original logo precisely and then add: "solid transparent-style white background, isolated, professional clean vector logo, zero text".
+- MANDATORY REPLY: Always respond directly to the user's intent. Do not provide meta-commentary unless necessary.
+
+Replace description with a detailed prompt (e.g. "cyberpunk%20city").
 
 Do NOT introduce yourself unless explicitly asked.
 Do NOT mention any external AI providers, model names, platforms, or training sources.
@@ -62,7 +63,7 @@ Communication rules:
 - Ask clarifying questions only when necessary
 
 Capabilities:
-- Answer questions related to AI Mall™, UWO™ platforms, systems, and general knowledge
+- Answer questions related to AI Mall™, UWO platforms, systems, and general knowledge
 - Summarize, rewrite, and translate content
 - Assist with drafting messages, documents, and explanations
 - Provide step-by-step guidance when appropriate
@@ -73,15 +74,25 @@ Boundaries:
 - If information is uncertain, state limitations without technical or training disclosures
 
 Primary objective:
-Support UWO™ and AI Mall™ users by delivering reliable, practical, and brand-aligned assistance.
-`}]
-  },
+Support UWO and AI Mall™ users by delivering reliable, practical, and brand-aligned assistance.`;
+
+// Create generative model using VERTEX AI ONLY
+export const generativeModel = vertexAI.preview.getGenerativeModel({
+  model: modelName,
+  safetySettings: [
+    {
+      category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+      threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+    },
+  ],
+  generationConfig: { maxOutputTokens: 4096 },
+  systemInstruction: systemInstructionText,
 });
 
-const generativeVisionModel = vertexAI.getGenerativeModel({
-  model: visionModel,
-});
+// Export Vertex AI instance for multi-model support in chatRoutes
+export const genAIInstance = {
+  getGenerativeModel: (options) => vertexAI.preview.getGenerativeModel(options)
+};
 
-const generativeModelPreview = vertexAI.preview.getGenerativeModel({
-  model: textModel,
-});
+// Export vertexAI instance
+export { vertexAI };

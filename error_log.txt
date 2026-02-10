@@ -1,0 +1,34 @@
+﻿MONGO_URI mongodb://gurumukhahuja3_db_user:I264cAAGxgT9YcQR@ac-dskxu0w-shard-00-00.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-01.selr4is.mongodb.net:27017,ac-dskxu0w-shard-00-02.selr4is.mongodb.net:27017/AI_MALL?ssl=true&authSource=admin&retryWrites=true&w=majority
+Γ£à Gemini AI initializing with API Key
+[INFO] [Cloudinary Config] Cloud Name: Set
+[INFO] [Cloudinary Config] API Key: Set
+[INFO] [Cloudinary Config] API Secret: Set
+node : ΓÜá∩╕Å Email 
+credentials missing. 
+Nodemailer disabled.
+At line:1 char:1
++ node server.js 2>&1 | 
+Out-File -FilePath 
+error_log.txt -Encoding utf8
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (ΓÜá∩╕Å   
+  Email cr...ailer disable   
+ d.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+ΓÜá∩╕Å [VoiceController] Key 
+file not found, attempting 
+ADC...
+Γ£à [VoiceController] Google Cloud TTS Client Initialized with ADC
+ΓÜá∩╕Å  Gmail credentials 
+not configured. Contact 
+emails will be logged only.
+AI-Mall Backend running on  http://localhost:8080
+Razorpay Config Check: { KeyID: 'rzp_live...', Secret: 'PRESENT' }
+Warning: TT: undefined function: 32
+[INFO] MongoDB Connected: ac-dskxu0w-shard-00-00.selr4is.mongodb.net
+Database connected, initializing services...
+[INFO] Using MongoDB Atlas Vector Search. Persistence is handled natively.

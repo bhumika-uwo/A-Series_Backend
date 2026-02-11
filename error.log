@@ -165,3 +165,14 @@ Stack: Error: Model generation failed: Timeout
     at attemptGeneration (file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:548:15)
     at async file:///E:/A_Series/A-Series_Backend/routes/chatRoutes.js:559:19
 -------------------------------------------
+
+Timestamp: 2026-02-11T06:16:53.665Z
+Error: Model generation failed: [VertexAI.GoogleGenerativeAIError]: exception posting request to model
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: Model generation failed: [VertexAI.GoogleGenerativeAIError]: exception posting request to model
+    at attemptGeneration (file:///E:/mi/A-Series_Backend/routes/chatRoutes.js:570:15)
+    at async file:///E:/mi/A-Series_Backend/routes/chatRoutes.js:581:19
+-------------------------------------------

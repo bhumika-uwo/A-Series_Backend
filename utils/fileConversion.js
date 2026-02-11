@@ -1,226 +1,309 @@
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
-import { Document, Packer, Paragraph, TextRun } from 'docx';
+import { Document, Packer, Paragraph, TextRun, ImageRun } from 'docx';
 import mammoth from 'mammoth';
 import pdfParse from 'pdf-parse/lib/pdf-parse.js';
+import PptxGenJS from 'pptxgenjs';
+import officeParser from 'officeparser';
+import * as XLSX from 'xlsx';
+import sharp from 'sharp';
 
 /**
- * File Conversion Service for AISA
- * Handles PDF ↔ DOCX conversions
+ * Universal File Conversion Service for AISA
+ * Supports: PDF, DOCX/DOC, PPTX/PPT, XLSX/XLS, CSV, TXT, PNG, JPG/JPEG
  */
 
 /**
- * Detect file type from buffer
- * @param {Buffer} buffer - File buffer
- * @returns {string} - File type: 'pdf', 'docx', or 'unknown'
+ * Detect file type from buffer if extension is missing/generic
  */
-function detectFileType(buffer) {
-    // PDF files start with %PDF
-    if (buffer.toString('utf8', 0, 4) === '%PDF') {
-        return 'pdf';
-    }
+function detectFormatFromBuffer(buffer) {
+    if (!buffer || buffer.length < 4) return null;
 
-    // DOCX files are ZIP archives with specific structure
-    // Check for PK (ZIP signature) at start
-    if (buffer[0] === 0x50 && buffer[1] === 0x4B) {
-        return 'docx';
-    }
+    const hex = buffer.toString('hex', 0, 8).toLowerCase();
 
-    return 'unknown';
+    if (hex.startsWith('25504446')) return 'pdf'; // %PDF
+    if (hex.startsWith('504b0304')) return 'docx'; // ZIP (DOCX, PPTX, XLSX)
+    if (hex.startsWith('ffd8ff')) return 'jpg';     // JPEG
+    if (hex.startsWith('89504e47')) return 'png';   // PNG
+    if (hex.startsWith('d0cf11e0')) return 'doc';    // OLE Compound File (Legacy DOC, PPT, XLS)
+
+    // Check for plain text (simple check)
+    if (buffer[0] >= 32 && buffer[0] <= 126 && buffer[1] >= 32 && buffer[1] <= 126) return 'txt';
+
+    return null;
+}
+
+/**
+ * Sanitizes text for PDF generation using standard fonts (WinAnsi encoding)
+ * Removes/replaces characters that would cause "WinAnsi cannot encode" errors
+ */
+function sanitizeForPdf(text) {
+    if (!text) return "";
+    // Replace common problematic unicode characters with ASCII equivalents
+    return text
+        .replace(/[\u2010\u2011\u2012\u2013\u2014\u2015]/g, '-') // Hyphens/Dashes
+        .replace(/[\u2018\u2019\u201A\u201B\u2032\u2035]/g, "'") // Single quotes
+        .replace(/[\u201C\u201D\u201E\u201F\u2033\u2036]/g, '"') // Double quotes
+        .replace(/[\u2022\u2023\u2043\u204C\u204D]/g, '*')     // Bullets
+        .replace(/[^\x00-\x7F\u00A0-\u00FF]/g, '?');           // Everything else not in WinAnsi/Latin1
+}
+
+/**
+ * Validate and Normalize Formats
+ */
+function normalizeFormat(format) {
+    if (!format) return 'unknown';
+    const f = format.toLowerCase().replace('.', '').trim();
+    if (f === 'ppt') return 'pptx';
+    if (f === 'doc') return 'docx';
+    if (f === 'xls') return 'xlsx';
+    if (f === 'jpg' || f === 'jpeg') return 'jpg';
+    return f;
 }
 
 /**
  * Validate if conversion is supported
- * @param {string} sourceType - Source file type
- * @param {string} targetType - Target file type
- * @returns {boolean} - True if conversion is supported
  */
-function validateConversionRequest(sourceType, targetType) {
-    const validConversions = [
-        { from: 'pdf', to: 'docx' },
-        { from: 'docx', to: 'pdf' },
-        { from: 'doc', to: 'pdf' }
-    ];
+function validateConversionRequest(source, target) {
+    const s = normalizeFormat(source);
+    const t = normalizeFormat(target);
 
-    return validConversions.some(
-        conv => conv.from === sourceType.toLowerCase() && conv.to === targetType.toLowerCase()
-    );
+    const matrix = {
+        'pdf': ['docx', 'txt', 'jpg', 'pptx'],
+        'docx': ['pdf', 'pptx', 'txt', 'jpg'],
+        'pptx': ['pdf', 'docx', 'txt', 'jpg'],
+        'xlsx': ['pdf', 'docx', 'csv', 'txt'],
+        'csv': ['xlsx', 'pdf', 'docx'],
+        'txt': ['pdf', 'docx', 'pptx', 'xlsx'],
+        'jpg': ['pdf', 'docx', 'pptx', 'png'],
+        'png': ['pdf', 'docx', 'pptx', 'jpg']
+    };
+
+    return (matrix[s] && matrix[s].includes(t)) || s === t;
 }
 
 /**
- * Convert PDF to DOCX
- * @param {Buffer} pdfBuffer - PDF file buffer
- * @returns {Promise<Buffer>} - DOCX file buffer
+ * --- CONVERSION IMPLEMENTATIONS ---
  */
-async function convertPdfToDocx(pdfBuffer) {
+
+async function convertImageToPdf(imageBuffer, mimeType) {
     try {
-        // Parse PDF to extract text
-        const pdfData = await pdfParse(pdfBuffer);
-        const text = pdfData.text;
+        const pdfDoc = await PDFDocument.create();
+        const page = pdfDoc.addPage();
+        const { width, height } = page.getSize();
 
-        // Split text into paragraphs
-        const paragraphs = text.split('\n').filter(line => line.trim().length > 0);
+        let image;
+        if (mimeType.includes('png')) {
+            image = await pdfDoc.embedPng(imageBuffer);
+        } else {
+            image = await pdfDoc.embedJpg(imageBuffer);
+        }
 
-        // Create DOCX document
-        const doc = new Document({
-            sections: [{
-                properties: {},
-                children: paragraphs.map(para =>
-                    new Paragraph({
-                        children: [new TextRun(para)]
-                    })
-                )
-            }]
+        const dims = image.scaleToFit(width - 40, height - 40);
+        page.drawImage(image, {
+            x: 20,
+            y: height - dims.height - 20,
+            width: dims.width,
+            height: dims.height,
         });
 
-        // Generate buffer
-        const buffer = await Packer.toBuffer(doc);
-        return buffer;
-
-    } catch (error) {
-        console.error('PDF to DOCX conversion error:', error);
-        throw new Error('Failed to convert PDF to DOCX: ' + error.message);
+        return Buffer.from(await pdfDoc.save());
+    } catch (e) {
+        throw new Error('Image to PDF failed: ' + e.message);
     }
 }
 
-/**
- * Helper to wrap text based on width
- */
-function wrapText(text, width, font, fontSize) {
-    const words = text.split(/\s+/);
-    const lines = [];
-    let currentLine = '';
-
-    for (const word of words) {
-        const testLine = currentLine ? `${currentLine} ${word}` : word;
-        const testWidth = font.widthOfTextAtSize(testLine, fontSize);
-        if (testWidth > width && currentLine) {
-            lines.push(currentLine);
-            currentLine = word;
-        } else {
-            currentLine = testLine;
-        }
-    }
-    if (currentLine) lines.push(currentLine);
-    return lines;
-}
-
-/**
- * Convert DOCX to PDF
- * @param {Buffer} docxBuffer - DOCX file buffer
- * @returns {Promise<Buffer>} - PDF file buffer
- */
-async function convertDocxToPdf(docxBuffer) {
+async function convertCsvToXlsx(csvBuffer) {
     try {
-        // Extract text from DOCX
-        const result = await mammoth.extractRawText({ buffer: docxBuffer });
-        let text = result.value;
+        const workbook = XLSX.read(csvBuffer, { type: 'buffer' });
+        return XLSX.write(workbook, { type: 'buffer', bookType: 'xlsx' });
+    } catch (e) {
+        throw new Error('CSV to XLSX failed: ' + e.message);
+    }
+}
 
-        // Clean text: remove or replace problematic Unicode characters
-        // Keep only ASCII-safe characters and common Unicode ranges
-        text = text.replace(/[^\x00-\x7F\u0080-\u00FF\u0100-\u017F\u0180-\u024F]/g, '?');
-
-        // Create PDF document
+async function convertTxtToPdf(txtBuffer) {
+    try {
+        const text = sanitizeForPdf(txtBuffer.toString('utf8'));
         const pdfDoc = await PDFDocument.create();
         const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+        const page = pdfDoc.addPage();
+        const { width, height } = page.getSize();
 
-        const pageWidth = 595.28; // A4 width in points
-        const pageHeight = 841.89; // A4 height in points
-        const margin = 50;
-        const fontSize = 11;
-        const lineHeight = fontSize * 1.4;
-        const maxWidth = pageWidth - (margin * 2);
+        page.drawText(text.substring(0, 2000), { // Basic snippet for text
+            x: 50,
+            y: height - 50,
+            size: 10,
+            font: font,
+            color: rgb(0, 0, 0),
+        });
 
-        // Split text into paragraphs
-        const paragraphs = text.split('\n');
-
-        let page = pdfDoc.addPage([pageWidth, pageHeight]);
-        let yPosition = pageHeight - margin;
-
-        for (const para of paragraphs) {
-            const cleanPara = para.trim();
-
-            // Handle empty paragraphs as small gaps
-            if (cleanPara.length === 0) {
-                yPosition -= lineHeight * 0.5;
-                if (yPosition < margin) {
-                    page = pdfDoc.addPage([pageWidth, pageHeight]);
-                    yPosition = pageHeight - margin;
-                }
-                continue;
-            }
-
-            // Wrap text for this paragraph
-            const wrappedLines = wrapText(cleanPara, maxWidth, font, fontSize);
-
-            for (const line of wrappedLines) {
-                if (yPosition < margin) {
-                    page = pdfDoc.addPage([pageWidth, pageHeight]);
-                    yPosition = pageHeight - margin;
-                }
-
-                try {
-                    page.drawText(line, {
-                        x: margin,
-                        y: yPosition,
-                        size: fontSize,
-                        font: font,
-                        color: rgb(0, 0, 0),
-                    });
-                } catch (drawError) {
-                    // If drawing fails, try with sanitized text
-                    const sanitized = line.replace(/[^\x00-\x7F]/g, '?');
-                    page.drawText(sanitized, {
-                        x: margin,
-                        y: yPosition,
-                        size: fontSize,
-                        font: font,
-                        color: rgb(0, 0, 0),
-                    });
-                }
-
-                yPosition -= lineHeight;
-            }
-            // Extra gap between paragraphs
-            yPosition -= lineHeight * 0.3;
-        }
-
-        // Save PDF
-        const pdfBytes = await pdfDoc.save();
-        return Buffer.from(pdfBytes);
-
-    } catch (error) {
-        console.error('DOCX to PDF conversion error:', error);
-        throw new Error('Failed to convert DOCX to PDF: ' + error.message);
+        return Buffer.from(await pdfDoc.save());
+    } catch (e) {
+        throw new Error('TXT to PDF failed: ' + e.message);
     }
 }
 
 /**
- * Main conversion function
- * @param {Buffer} fileBuffer - Source file buffer
- * @param {string} sourceFormat - Source format (pdf/docx)
- * @param {string} targetFormat - Target format (pdf/docx)
- * @returns {Promise<Buffer>} - Converted file buffer
+ * Main Conversion Router
  */
 export async function convertFile(fileBuffer, sourceFormat, targetFormat) {
-    // Validate conversion
-    if (!validateConversionRequest(sourceFormat, targetFormat)) {
-        throw new Error(`Conversion from ${sourceFormat} to ${targetFormat} is not supported`);
+    let s = normalizeFormat(sourceFormat);
+    let t = normalizeFormat(targetFormat);
+
+    // Auto-detect if format is generic or missing
+    if (s === 'document' || s === 'unknown' || s === 'bin' || s === 'file' || s === '') {
+        const detected = detectFormatFromBuffer(fileBuffer);
+        if (detected) {
+            console.log(`[CONVERTER] Auto-detected source format: ${detected}`);
+            s = detected;
+        }
     }
 
-    // Detect actual file type
-    const detectedType = detectFileType(fileBuffer);
-    if (detectedType === 'unknown') {
-        throw new Error('Unable to detect file type. Please ensure the file is a valid PDF or DOCX');
+    console.log(`[CONVERTER] Routing request: ${s} -> ${t}`);
+
+    if (!validateConversionRequest(s, t)) {
+        throw new Error(`Conversion from ${s} to ${t} is not supported yet.`);
     }
 
-    // Perform conversion
-    if (sourceFormat.toLowerCase() === 'pdf' && targetFormat.toLowerCase() === 'docx') {
-        return await convertPdfToDocx(fileBuffer);
-    } else if (sourceFormat.toLowerCase() === 'docx' && targetFormat.toLowerCase() === 'pdf') {
-        return await convertDocxToPdf(fileBuffer);
+    // Identity conversion
+    if (s === t) return fileBuffer;
+
+    // --- Image to Image Conversions ---
+    if ((s === 'png' || s === 'jpg') && (t === 'png' || t === 'jpg')) {
+        try {
+            if (t === 'jpg') {
+                return await sharp(fileBuffer).jpeg().toBuffer();
+            } else {
+                return await sharp(fileBuffer).png().toBuffer();
+            }
+        } catch (e) {
+            throw new Error(`Image conversion failed: ${e.message}`);
+        }
     }
 
-    throw new Error('Unsupported conversion type');
+    // PDF Targets
+    if (t === 'pdf') {
+        if (s === 'docx') {
+            const result = await mammoth.extractRawText({ buffer: fileBuffer });
+            const pdfDoc = await PDFDocument.create();
+            const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+            const page = pdfDoc.addPage();
+            page.drawText(sanitizeForPdf(result.value.substring(0, 5000)), { x: 50, y: 750, size: 10, font });
+            return Buffer.from(await pdfDoc.save());
+        }
+        if (s === 'pptx') {
+            const text = await officeParser.parseOfficeAsync(fileBuffer);
+            const pdfDoc = await PDFDocument.create();
+            const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+            const page = pdfDoc.addPage();
+            page.drawText(sanitizeForPdf(text.substring(0, 5000)), { x: 50, y: 750, size: 10, font });
+            return Buffer.from(await pdfDoc.save());
+        }
+        if (s === 'xlsx' || s === 'csv') {
+            const workbook = XLSX.read(fileBuffer, { type: 'buffer' });
+            const sheet = workbook.Sheets[workbook.SheetNames[0]];
+            const csv = XLSX.utils.sheet_to_csv(sheet);
+            const pdfDoc = await PDFDocument.create();
+            const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+            const page = pdfDoc.addPage();
+            page.drawText(sanitizeForPdf(csv.substring(0, 5000)), { x: 50, y: 750, size: 8, font });
+            return Buffer.from(await pdfDoc.save());
+        }
+        if (s === 'txt') return await convertTxtToPdf(fileBuffer);
+        if (s === 'jpg' || s === 'png') return await convertImageToPdf(fileBuffer, s);
+    }
+
+    // Word Targets (DOCX)
+    if (t === 'docx') {
+        if (s === 'pdf') {
+            const data = await pdfParse(fileBuffer);
+            const doc = new Document({
+                sections: [{
+                    children: data.text.split('\n').filter(l => l.trim()).map(p =>
+                        new Paragraph({ children: [new TextRun(sanitizeForPdf(p))] })
+                    )
+                }]
+            });
+            return await Packer.toBuffer(doc);
+        }
+        if (s === 'pptx') {
+            const text = await officeParser.parseOfficeAsync(fileBuffer);
+            const doc = new Document({ sections: [{ children: text.split('\n').map(p => new Paragraph({ children: [new TextRun(p)] })) }] });
+            return await Packer.toBuffer(doc);
+        }
+        if (s === 'txt' || s === 'csv') {
+            const text = fileBuffer.toString();
+            const doc = new Document({ sections: [{ children: text.split('\n').map(p => new Paragraph({ children: [new TextRun(p)] })) }] });
+            return await Packer.toBuffer(doc);
+        }
+        if (s === 'jpg' || s === 'png') {
+            const doc = new Document({
+                sections: [{
+                    children: [
+                        new Paragraph({
+                            children: [
+                                new ImageRun({
+                                    data: fileBuffer,
+                                    transformation: { width: 400, height: 400 }
+                                })
+                            ]
+                        })
+                    ]
+                }]
+            });
+            return await Packer.toBuffer(doc);
+        }
+    }
+
+    // PPTX Targets
+    if (t === 'pptx') {
+        const pptx = new PptxGenJS();
+        if (s === 'docx' || s === 'pdf' || s === 'txt' || s === 'csv') {
+            let text = "";
+            if (s === 'docx') text = (await mammoth.extractRawText({ buffer: fileBuffer })).value;
+            else if (s === 'pdf') text = (await pdfParse(fileBuffer)).text;
+            else text = fileBuffer.toString();
+
+            const paragraphs = text.split('\n').filter(p => p.trim());
+            const linesPerSlide = 12;
+
+            for (let i = 0; i < paragraphs.length; i += linesPerSlide) {
+                const slide = pptx.addSlide();
+                const chunk = paragraphs.slice(i, i + linesPerSlide).join('\n');
+                slide.addText(chunk, {
+                    x: 0.5, y: 0.5, w: '90%', h: '90%',
+                    fontSize: 14,
+                    color: '363636',
+                    valign: 'top'
+                });
+            }
+            if (paragraphs.length === 0) {
+                pptx.addSlide().addText("No text content found.", { x: 0.5, y: 0.5, w: '90%', h: '10%' });
+            }
+        } else if (s === 'jpg' || s === 'png') {
+            const slide = pptx.addSlide();
+            const base64Image = fileBuffer.toString('base64');
+            slide.addImage({
+                data: `data:image/${s};base64,${base64Image}`,
+                x: 0.5, y: 0.5, w: '90%', h: '90%'
+            });
+        }
+        const buf = await pptx.write('nodebuffer');
+        return Buffer.from(buf);
+    }
+
+    // Spreadsheet Targets
+    if (t === 'xlsx') {
+        if (s === 'csv') return await convertCsvToXlsx(fileBuffer);
+        if (s === 'txt') {
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.aoa_to_sheet(fileBuffer.toString().split('\n').map(l => [l]));
+            XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+            return XLSX.write(wb, { type: 'buffer', bookType: 'xlsx' });
+        }
+    }
+
+    throw new Error('This specific conversion path is not fully implemented.');
 }
 
-export { convertPdfToDocx, convertDocxToPdf, detectFileType, validateConversionRequest };
+export { validateConversionRequest };

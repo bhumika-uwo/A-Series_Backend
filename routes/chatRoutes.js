@@ -428,7 +428,7 @@ Do not output any other text or explanation if you are triggering these actions.
         let source = ext;
 
         if (ext === 'pdf') target = 'docx';
-        else if (['doc', 'docx'].includes(ext)) target = 'pdf';
+        else if (['doc', 'docx', 'pptx'].includes(ext)) target = 'pdf';
         else if (['jpg', 'jpeg', 'png', 'webp', 'xls', 'xlsx'].includes(ext)) target = 'pdf';
 
         conversionParams = {
@@ -466,19 +466,41 @@ Do not output any other text or explanation if you are triggering these actions.
           // Convert result to base64
           const convertedBase64 = convertedBuffer.toString('base64');
 
-          // Determine output filename
+          // Determine output filename and MIME type
+          let target = (conversionParams.target_format || 'pdf').toLowerCase().replace('.', '');
+
+          // Normalize extension for filename consistency
+          if (target === 'ppt') target = 'pptx';
+          if (target === 'doc') target = 'docx';
+          if (target === 'xls') target = 'xlsx';
+
           const originalName = conversionParams.file_name || 'document';
-          const baseName = originalName.replace(/\.(pdf|docx?|doc)$/i, '');
-          const outputExtension = conversionParams.target_format === 'pdf' ? 'pdf' : 'docx';
+          const baseName = originalName.split('.')[0];
+
+          const mimeTypes = {
+            'pdf': 'application/pdf',
+            'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'doc': 'application/msword',
+            'pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'ppt': 'application/vnd.ms-powerpoint',
+            'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'xls': 'application/vnd.ms-excel',
+            'csv': 'text/csv',
+            'txt': 'text/plain',
+            'png': 'image/png',
+            'jpg': 'image/jpeg',
+            'jpeg': 'image/jpeg'
+          };
+
+          const outputExtension = target;
           const outputFileName = `${baseName}_converted.${outputExtension}`;
+          const outputMimeType = mimeTypes[target] || 'application/octet-stream';
 
           conversionResult = {
             success: true,
             file: convertedBase64,
             fileName: outputFileName,
-            mimeType: conversionParams.target_format === 'pdf'
-              ? 'application/pdf'
-              : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            mimeType: outputMimeType,
             message: (jsonMatch && jsonMatch[1])
               ? aiResponse.replace(jsonMatch[1], '').replace(/```json|```/g, '').trim()
               : "Here is your converted document."
